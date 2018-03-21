@@ -18,5 +18,10 @@
 .Blog ul li a {
   display: block;
   text-decoration: none;
+  color: #09f;
+}
+.Blog ul li a:hover,
+.Blog ul li a:active  {
+  color: #ff6a00;
 }
 
