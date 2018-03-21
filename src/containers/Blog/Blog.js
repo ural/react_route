@@ -12,12 +12,12 @@ class Blog extends Component {
         posts: [],
         selectedPostId: null,
         error: false
-    }
+    };
 
     componentDidMount () {
         axios.get( '/posts' )
             .then( response => {
-                const posts = response.data.slice(0, 4);
+                const posts = response.data.slice(0, 3);
                 const updatedPosts = posts.map(post => {
                     return {
                         ...post,
