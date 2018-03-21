@@ -1,7 +1,22 @@
 .Posts {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    width: 80%;
-    margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
 }
+.Blog ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Blog ul li {
+  display: block;
+  padding: 12px 20px;
+}
+.Blog ul li a {
+  display: block;
+  text-decoration: none;
+}
+
