@@ -1,15 +1,9 @@
-.Posts {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  width: 80%;
-  margin: auto;
-}
 .Blog ul {
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 .Blog ul li {
   display: block;
@@ -19,6 +13,8 @@
   display: block;
   text-decoration: none;
   color: #09f;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .Blog ul li a:hover,
 .Blog ul li a:active  {
