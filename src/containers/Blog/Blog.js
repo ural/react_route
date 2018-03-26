@@ -1,25 +1,10 @@
 import React, { Component } from 'react';
 import Posts from './Posts/Posts';
+import { Route } from 'react-router-dom';
 
-/*
-import axios from '../../axios';
-*/
-
-/*
-import Post from '../../components/Post/Post';
-import FullPost from './FullPost/FullPost';
-import NewPost from './NewPost/NewPost';
-*/
 import './Blog.css';
 
 class Blog extends Component {
-/*
-  state = {
-    posts: [],
-    selectedPostId: null,
-    error: false
-  };
-*/
 
   render() {
 
@@ -34,18 +19,14 @@ class Blog extends Component {
           </nav>
         </header>
 
+        <Route path="/" exact render={() => <h2>HOME ??? </h2>} />
+        <Route path="/new-post" exact render={() => <Posts/> } />
+{/*
         <section className="Posts">
           <Posts/>
         </section>
-
-        {/*
-                <section>
-                    <FullPost id={this.state.selectedPostId} />
-                </section>
-                <section>
-                    <NewPost />
-                </section>
 */}
+
       </div>
     );
   }
