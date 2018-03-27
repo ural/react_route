@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Posts from './Posts/Posts';
 import { Route } from 'react-router-dom';
+import NewPost from './NewPost/NewPost';
+import { Link } from 'react-router-dom';
 
 import './Blog.css';
 
@@ -13,14 +15,18 @@ class Blog extends Component {
         <header>
           <nav>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/new-post">New POst</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to={{
+                pathname: "/new-post",
+                hash: "#submit",
+                search: "?quick-submit=true"
+              }}>New POst</Link></li>
             </ul>
           </nav>
         </header>
 
-        <Route path="/" exact render={() => <h2>HOME ??? </h2>} />
-        <Route path="/new-post" exact render={() => <Posts/> } />
+        <Route path="/" exact component={Posts} />
+        <Route path="/new-post" exact component={NewPost}  />
 {/*
         <section className="Posts">
           <Posts/>

@@ -16,6 +16,9 @@ class Posts extends React.Component {
     this.setState({selectedPostId: id});
   };
   componentDidMount() {
+
+    console.log(this.props);
+
     axios.get('/posts')
       .then(response => {
         const posts = response.data.slice(0, 3);
